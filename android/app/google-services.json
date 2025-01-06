@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "723786357355",
+    "project_id": "safari-a51b6",
+    "storage_bucket": "safari-a51b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723786357355:android:002417c00e795201d9af2e",
+        "android_client_info": {
+          "package_name": "com.kplus.safari"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVbH1bw5xP1IpcLPCf7G1X_ubNnaBlClI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
