@@ -25,6 +25,8 @@ class UpdatePopup extends StatelessWidget {
             width: context.width * 0.5, height: context.width * 0.5),
         const SizedBox(height: 20),
         Dialog(
+          shadowColor: Colors.black,
+          elevation: 52,
           surfaceTintColor: Colors.white,
           backgroundColor: Colors.white,
           shape:

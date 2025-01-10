@@ -304,11 +304,12 @@ class TicketCardLeavingWidget extends StatelessWidget {
                           width: 12,
                         ),
                         TextWidget(
-                          text: '$componyName',
+                          text:
+                              // '$componyName',
 
-                          // flightTicketCubit.searchTypeValue == 'tek'
-                          //     ? '$componyName  $index'
-                          //     : '$componyName $index ${idGroup == 'Fsp' ? 'F' : idGroup == 'sp' ? 'S' : idGroup![0] == 'p' ? 'P' : 'W'}  ',
+                              flightTicketCubit.searchTypeValue == 'tek'
+                                  ? '$componyName  $index'
+                                  : '$componyName $index ${idGroup == 'Fsp' ? 'F' : idGroup == 'sp' ? 'S' : idGroup![0] == 'p' ? 'P' : 'W'}  ',
                           fontSize: 14,
                           color: Colors.black26,
                         ),

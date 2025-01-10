@@ -38,6 +38,21 @@ class ControllerForPriceAndContinueBottomSheetWidget extends StatelessWidget {
             .fareAlternativeLegs!
             .last
             .key;
+      } else if (flightTicketCubit.returnGroupId!.length >= 6) {
+        keyOneForAllValue = flightTicketCubit
+            .afterRefreshFlightSearchResultsLeaving[
+                flightTicketCubit.sendIndexValue!]
+            .fares![0]
+            .fareAlternativeLegs!
+            .first
+            .key;
+        keyTwoForAllValue = flightTicketCubit
+            .afterRefreshFlightSearchResultsReturn[
+                flightTicketCubit.sendIndexValueReturn!]
+            .fares![0]
+            .fareAlternativeLegs!
+            .last
+            .key;
       } else {
         keyOneForAllValue = flightTicketCubit
             .afterRefreshFlightSearchResultsReturn[

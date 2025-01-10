@@ -99,7 +99,7 @@ class AuthCubit extends Cubit<AuthState> {
 
       if (response.statusCode == 200) {
         final tokenData = Token.fromJson(response.data['Result']);
-        //    print('TokenCode:::: ${tokenData.tokenCode}');
+        print('TokenCode:::: ${tokenData.tokenCode}');
 
         token = tokenData.tokenCode;
         saveToken(token!);

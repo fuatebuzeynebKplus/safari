@@ -235,11 +235,10 @@ class SignInView extends StatelessWidget {
                                                     } else {
                                                       await authCubit.login(
                                                           context: context);
-
-                                                      BlocProvider.of<
+                                                      await BlocProvider.of<
                                                                   CurrencyCodeCubit>(
                                                               context)
-                                                          .saveTimeAndStartTimer();
+                                                          .fetchCurrencyData();
                                                     }
                                                   },
                                                   child: Center(
@@ -287,6 +286,14 @@ class SignInView extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
+                                          Image.asset(
+                                            'assets/images/icon_logo.png',
+                                            height: context.width * 0.4,
+                                            width: context.width * 0.4,
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
                                           Container(
                                             decoration: BoxDecoration(
                                               boxShadow: const [

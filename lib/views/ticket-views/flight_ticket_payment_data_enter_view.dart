@@ -76,13 +76,13 @@ class FlightTicketPaymentDataEnterView extends StatelessWidget {
             } else {
               Navigator.pushReplacementNamed(
                 context,
-                TestView.id,
+                FlightTicketBookResult.id,
               );
             }
           } else {
             Navigator.pushReplacementNamed(
               context,
-              TestView.id,
+              FlightTicketBookResult.id,
             );
           }
         } else if (state is FlightBookFailure) {
@@ -276,9 +276,6 @@ class FlightTicketPaymentDataEnterView extends StatelessWidget {
                                       },
                                     ),
                                   ),
-                            const SizedBox(
-                              height: 8,
-                            ),
                             Expanded(
                               child: SingleChildScrollView(
                                 child: Padding(

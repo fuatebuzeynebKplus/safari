@@ -1486,7 +1486,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
                     AirResult(
                       data: item.data,
                       fares: item.fares,
-                      groupId: 'pc$index',
+                      groupId:
+                          item.groupId == null ? 'pc$index' : '${item.groupId}',
                       isCharter: null,
                       legs: [
                         AirLeg(
@@ -2995,28 +2996,30 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
   //   }
 
   // }
-  void sortPriceLessToHighFunc(BuildContext context) {
+  void sortPriceLessToHighFunc(BuildContext context, {bool isPackage = false}) {
     //  emit(SearchFlightOneAwayLoading());
     if (selectedCardLeaving == null) {
-      afterRefreshFlightSearchResultsLeaving.sort((a, b) {
-        double priceA =
-            BlocProvider.of<CurrencyCodeCubit>(context).convertToAppCurrency(
-          itemPrice: a.fares![0].totalPrice!.totalStrikeAmount!.toDouble(),
-          appCurrencyExchangeRate:
-              BlocProvider.of<CurrencyCodeCubit>(context).currencyRate!,
-          ticketCurrencyCode: a.fares![0].totalPrice!.currencyCode!,
-        );
+      if (isPackage == false) {
+        afterRefreshFlightSearchResultsLeaving.sort((a, b) {
+          double priceA =
+              BlocProvider.of<CurrencyCodeCubit>(context).convertToAppCurrency(
+            itemPrice: a.fares![0].totalPrice!.totalStrikeAmount!.toDouble(),
+            appCurrencyExchangeRate:
+                BlocProvider.of<CurrencyCodeCubit>(context).currencyRate!,
+            ticketCurrencyCode: a.fares![0].totalPrice!.currencyCode!,
+          );
 
-        double priceB =
-            BlocProvider.of<CurrencyCodeCubit>(context).convertToAppCurrency(
-          itemPrice: b.fares![0].totalPrice!.totalStrikeAmount!.toDouble(),
-          appCurrencyExchangeRate:
-              BlocProvider.of<CurrencyCodeCubit>(context).currencyRate!,
-          ticketCurrencyCode: b.fares![0].totalPrice!.currencyCode!,
-        );
+          double priceB =
+              BlocProvider.of<CurrencyCodeCubit>(context).convertToAppCurrency(
+            itemPrice: b.fares![0].totalPrice!.totalStrikeAmount!.toDouble(),
+            appCurrencyExchangeRate:
+                BlocProvider.of<CurrencyCodeCubit>(context).currencyRate!,
+            ticketCurrencyCode: b.fares![0].totalPrice!.currencyCode!,
+          );
 
-        return priceA.compareTo(priceB);
-      });
+          return priceA.compareTo(priceB);
+        });
+      }
     } else {
       null;
     }
@@ -4713,22 +4716,51 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
           selectedFlightFirstLiter!.length > 5) {
         print(
             '*************************************************************************************');
+        print('Checking item with groupId: ${result.groupId}');
         for (var item in flightSearchResultsMainList!.last.results!) {
-          if (item.groupId == result.groupId) {
-            newResults.add(
-              AirResult(
-                data: item.data,
-                fares: item.fares,
-                groupId: item.groupId,
-                isCharter: null,
-                legs: item.legs,
-                providerCode: item.providerCode,
-                resultRef: item.resultRef,
-              ),
-            );
+          print('Checking item with groupId: ${item.groupId}');
+
+          if (item.groupId?.length != result.groupId?.length) {
+            // حذف أول حرف من result.groupId إذا كان الطول مختلفًا
+            String modifiedGroupId = result.groupId!.substring(1);
+
+            // مقارنة groupId بعد تعديل result.groupId
+            if (item.groupId == modifiedGroupId) {
+              print(
+                  'Adding item with modified groupId: ${item.groupId} to newResults');
+              newResults.add(
+                AirResult(
+                  data: item.data,
+                  fares: item.fares,
+                  groupId: item.groupId,
+                  isCharter: null,
+                  legs: item.legs,
+                  providerCode: item.providerCode,
+                  resultRef: item.resultRef,
+                ),
+              );
+            }
+          } else {
+            // إذا كان الطول متساويًا، قم بمقارنة مباشرة
+            if (item.groupId == result.groupId) {
+              print('Adding item with groupId: ${item.groupId} to newResults');
+              newResults.add(
+                AirResult(
+                  data: item.data,
+                  fares: item.fares,
+                  groupId: item.groupId,
+                  isCharter: null,
+                  legs: item.legs,
+                  providerCode: item.providerCode,
+                  resultRef: item.resultRef,
+                ),
+              );
+            }
           }
         }
         afterRefreshFlightSearchResultsReturn.addAll(newResults);
+
+        print(afterRefreshFlightSearchResultsReturn.length);
       } else if (selectedFlightFirstLiter! == 'sp') {
         // print(
         //     'spspspspspspsspspspspsppspspspspspspspspspssppspspspspspsppspspspspspspsppspspspspspspspspspspspspsppspspsps');
@@ -4791,7 +4823,7 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
         print('onemli.length: ${afterRefreshFlightSearchResultsReturn.length}');
       }
     }
-    sortPriceLessToHighFunc(context);
+    sortPriceLessToHighFunc(context, isPackage: true);
   }
 
   List<Booking> filteredReservations = [];

@@ -11,11 +11,9 @@ import 'package:bamobile1/helper/shared-preferences/cache_hekper.dart';
 import 'package:bamobile1/helper/shared-preferences/service_locator.dart';
 import 'package:bamobile1/helper/routes.dart';
 import 'package:bamobile1/helper/shared-preferences/shared_preferences_funs.dart';
-import 'package:bamobile1/test_test_view.dart';
 import 'package:bamobile1/utils/app_sizes.dart';
 
 import 'package:bamobile1/views/other-views/tow_factor_login_view.dart';
-import 'package:device_preview/device_preview.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';

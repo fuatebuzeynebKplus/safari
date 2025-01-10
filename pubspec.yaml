@@ -50,10 +50,8 @@ dependencies:
   otp: ^3.1.4
   flutter_otp_text_field: ^1.2.0
   html: ^0.15.5
-  device_preview: ^1.1.0
-  awesome_snackbar_content: ^0.1.4
   rename: ^3.0.2
-  arabic_font: ^0.0.9
+
 
 
 

@@ -18,6 +18,7 @@ import 'package:bamobile1/test_view.dart';
 import 'package:bamobile1/utils/app_colors.dart';
 import 'package:bamobile1/utils/app_sizes.dart';
 import 'package:bamobile1/views/other-views/webview_view.dart';
+import 'package:bamobile1/views/ticket-views/flight_ticket_book_result.dart';
 import 'package:bamobile1/widgets/app_bar_widget.dart';
 import 'package:bamobile1/widgets/container_card_widget.dart';
 import 'package:bamobile1/widgets/error_result_widget.dart';
@@ -55,13 +56,13 @@ class HotelPaymentDataEnterView extends StatelessWidget {
             } else {
               Navigator.pushReplacementNamed(
                 context,
-                TestView.id,
+                FlightTicketBookResult.id,
               );
             }
           } else {
             Navigator.pushReplacementNamed(
               context,
-              TestView.id,
+              FlightTicketBookResult.id,
             );
           }
         } else if (state is HotelBookFailure) {

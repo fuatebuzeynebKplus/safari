@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:arabic_font/arabic_font.dart';
 import 'package:bamobile1/common/data/enums/air_cabin_type.dart';
 import 'package:bamobile1/common/data/enums/gender_type.dart';
 import 'package:bamobile1/common/data/enums/pax_type.dart';

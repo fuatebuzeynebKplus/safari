@@ -1,4 +1,5 @@
 import 'package:bamobile1/cubit/auth-cubit/auth_cubit.dart';
+import 'package:bamobile1/cubit/currency-code-cubit/currency_code_cubit.dart';
 import 'package:bamobile1/cubit/firabase-cubit/firebase_cubit.dart';
 import 'package:bamobile1/generated/l10n.dart';
 import 'package:bamobile1/views/main_views/banners_view.dart';
@@ -49,6 +50,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
+    BlocProvider.of<CurrencyCodeCubit>(context).saveTimeAndStartTimer();
     final firebaseCubit = BlocProvider.of<FirebaseCubit>(context);
 
     List<Widget> pages = [

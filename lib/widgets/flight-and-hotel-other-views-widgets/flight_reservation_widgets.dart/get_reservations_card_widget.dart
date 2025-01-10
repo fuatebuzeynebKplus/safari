@@ -350,7 +350,7 @@ class GetReservationsCardWidget extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: reservationState ==
                                     BookingStatusType.reservationSucceed
-                                ? AppColors.kSecondColor
+                                ? Colors.orange
                                 : reservationState ==
                                         BookingStatusType.ticketingSucceed
                                     ? Colors.green

@@ -37,7 +37,7 @@ import 'package:flutter/material.dart';
 
 final Map<String, Widget Function(BuildContext)> routes = {
   //---------------flight ticket-------------------
-  TestView.id: (context) => const TestView(),
+
   SignInView.id: (context) => const SignInView(),
   SplashView.id: (context) => const SplashView(),
   HomeView.id: (context) => const HomeView(),
@@ -63,7 +63,7 @@ final Map<String, Widget Function(BuildContext)> routes = {
   GetReservationsView.id: (context) => const GetReservationsView(),
   FlightReservationDetailsView.id: (context) =>
       const FlightReservationDetailsView(),
-  FlightTicketResultView.id: (context) => const FlightTicketResultView(),
+
   FlightTicketSearchConclusionMultiPointView.id: (context) =>
       const FlightTicketSearchConclusionMultiPointView(),
 

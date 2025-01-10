@@ -6,7 +6,7 @@ class AppColors {
   static Color kBluColor = const Color(0xFF4675B6);
   static Color kAppBarColor = const Color(0xFF4675B6);
 
-  static Color kPastelFromSecondColorOne = const Color(0x55f9ad55);
+  static Color kPastelFromSecondColorOne = const Color(0x33F16A34);
   static Color kPastelFromSecondColorTwo = const Color(0x88f9ad55);
   static Color kGrey = const Color(0xFF8B8B8B);
   static Color kWhite = const Color(0xFFF2F2F2);

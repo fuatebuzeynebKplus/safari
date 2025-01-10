@@ -22,6 +22,7 @@ import 'package:bamobile1/utils/app_colors.dart';
 import 'package:bamobile1/utils/app_sizes.dart';
 import 'package:bamobile1/views/other-views/flight-other-views/get_reservations_view.dart';
 import 'package:bamobile1/views/other-views/webview_view.dart';
+import 'package:bamobile1/views/ticket-views/flight_ticket_book_result.dart';
 import 'package:bamobile1/widgets/alert_dialog_widget.dart';
 import 'package:bamobile1/widgets/app_bar_widget.dart';
 import 'package:bamobile1/widgets/bottom_sheet_widget.dart';
@@ -116,7 +117,7 @@ class HotelReservationDetailsView extends StatelessWidget {
           } else {
             Navigator.pushNamed(
               context,
-              TestView.id,
+              FlightTicketBookResult.id,
             );
           }
         }
