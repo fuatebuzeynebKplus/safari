@@ -22,7 +22,7 @@ class AuthCubit extends Cubit<AuthState> {
   // String apiBaseUrlGeneral =
   //     "https://sandbox.kplus.com.tr/kplus/v0/General.svc/Rest/Json";
   String apiBaseUrlGeneral =
-      "https://ws.kplus.com.tr/alsafarigate/v0/General.svc/Rest/Json";
+      "https://api.alsafarigate.com/v0/General.svc/Rest/Json";
   final Dio _dio = Dio();
   String? token;
   String email = getIt<CacheHelper>().getDataString(key: 'email') ?? '';

@@ -1,4 +1,7 @@
 {
+    "NoFlightsFound": "Ucuşlar Bulunamadı",
+    "FlightsNotLoaded": "Ucuşlar Yuklenmedi",
+    "TransactionIsBeingProcessed": "İşleminizi gerçekleştiriyoruz...",
     "SearchFlight": "Ucuş Ara",
     "Amount": "Tutar",
     "Percent": "Oran",

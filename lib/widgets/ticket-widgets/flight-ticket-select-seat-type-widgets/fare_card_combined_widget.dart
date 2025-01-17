@@ -177,12 +177,13 @@ class FareCardCombinedWidget extends StatelessWidget {
                                             TextWidget(
                                               textAlign: TextAlign.start,
                                               isHaveOverflow: true,
-                                              text: result
-                                                      .fares![index]
-                                                      .fareAlternativeLegs[
-                                                          indexSub]
-                                                      .fareTitle
-                                                      .isEmpty
+                                              text: (result
+                                                          .fares![index]
+                                                          .fareAlternativeLegs[
+                                                              indexSub]
+                                                          .fareTitle
+                                                          ?.isEmpty ??
+                                                      true)
                                                   ? 'STANDARD'
                                                   : result
                                                       .fares![index]

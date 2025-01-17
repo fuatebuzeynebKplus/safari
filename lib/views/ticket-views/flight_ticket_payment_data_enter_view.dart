@@ -18,7 +18,6 @@ import 'package:bamobile1/generated/l10n.dart';
 import 'package:bamobile1/helper/functions.dart';
 import 'package:bamobile1/helper/shared-preferences/cache_hekper.dart';
 import 'package:bamobile1/helper/shared-preferences/service_locator.dart';
-import 'package:bamobile1/test_view.dart';
 import 'package:bamobile1/utils/app_colors.dart';
 import 'package:bamobile1/utils/app_sizes.dart';
 import 'package:bamobile1/views/ticket-views/flight_ticket_book_result.dart';
@@ -222,7 +221,7 @@ class FlightTicketPaymentDataEnterView extends StatelessWidget {
                                                                             .email!,
                                                                         is3D: true, // 38CM12TS82
                                                                         ipAdress: "88.241.185.1",
-                                                                        returnUrl: "https://www.bookingagora.com/"),
+                                                                        returnUrl: "https://www.alsafarigate.com/"),
                                                                 paymentItemId: flightTicketCubit.paymentId == null ? int.parse(flightTicketCubit.bookItemId!) : int.parse(flightTicketCubit.paymentId!),
                                                                 paymentType: flightTicketCubit.paymentType,
                                                                 paymentCommissionType: flightTicketCubit.paymentCommissionType),

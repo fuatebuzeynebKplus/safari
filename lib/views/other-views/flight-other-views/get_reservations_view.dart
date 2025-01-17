@@ -111,14 +111,14 @@ class GetReservationsView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextWidget(
-                          text: 'ari',
+                          text: 'Gate',
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
                           color: AppColors.kSecondColor,
                           fontFamily: 'Tajawal',
                         ),
                         const TextWidget(
-                          text: 'Saf',
+                          text: 'AlSafari',
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -130,14 +130,14 @@ class GetReservationsView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const TextWidget(
-                          text: 'Saf',
+                          text: 'AlSafari',
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontFamily: 'Tajawal',
                         ),
                         TextWidget(
-                          text: 'ari',
+                          text: 'Gate',
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
                           color: AppColors.kSecondColor,

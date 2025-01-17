@@ -1,4 +1,7 @@
 {
+    "NoFlightsFound": "No Flights Found",
+    "FlightsNotLoaded": "Flights Not Loaded",
+    "TransactionIsBeingProcessed": "Transaction is being processed...",
     "SearchFlight": "Search for a Flight",
     "Amount": "Amount",
     "Percent": "Percent",

@@ -4,7 +4,7 @@ import 'package:bamobile1/views/other-views/flight-other-views/hotel_reservation
 import 'package:bamobile1/views/other-views/tow_factor_login_view.dart';
 import 'package:bamobile1/views/ticket-views/multi_point_views/flight_ticket_select_multi_point_seat_view.dart';
 import 'package:bamobile1/widgets/ticket-widgets/flight-ticket-select-seat-type-widgets/new_fare_card.dart';
-import 'package:bamobile1/test_view.dart';
+
 import 'package:bamobile1/views/hotel-views/hotel_guest_data_enter_view.dart';
 import 'package:bamobile1/views/hotel-views/hotel_guest_details_view.dart';
 import 'package:bamobile1/views/hotel-views/hotel_payment_data_enter_view.dart';

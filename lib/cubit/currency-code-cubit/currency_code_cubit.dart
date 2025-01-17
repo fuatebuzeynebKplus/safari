@@ -52,7 +52,7 @@ class CurrencyCodeCubit extends Cubit<CurrencyCodeState> {
     try {
       final response = await _dio.post(
         // "https://sandbox.kplus.com.tr/kplus/v0/General.svc/rest/json/GetCurrencies",
-        "https://ws.kplus.com.tr/alsafarigate/v0/General.svc/rest/json/GetCurrencies",
+        "https://api.alsafarigate.com/v0/General.svc/rest/json/GetCurrencies",
         data: json.encode({
           "tokenCode": getIt<CacheHelper>().getDataString(key: 'token'),
         }),

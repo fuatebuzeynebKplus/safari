@@ -114,7 +114,9 @@ class TicketCardReturnWidget extends StatelessWidget {
     List<String> cabinClass = [];
 
     for (var fareSegments in flightCabinClassDetails!) {
-      cabinClass.add(fareSegments.classCode!);
+      if (fareSegments.classCode != null) {
+        cabinClass.add(fareSegments.classCode!);
+      }
     }
     String cabinClassString = cabinClass.join(',');
 
@@ -263,10 +265,9 @@ class TicketCardReturnWidget extends StatelessWidget {
                           width: 12,
                         ),
                         TextWidget(
-                          text:
-                              // '$componyName',
+                          text: '$componyName',
 
-                              '$componyName $index  ${idGroup![0] == 'p' ? 'P' : idGroup[0] == 's' ? 'S' : 'W'}',
+                          //'$componyName $index  ${idGroup![0] == 'p' ? 'P' : idGroup[0] == 's' ? 'S' : 'W'}',
                           fontSize: 14,
                           color: Colors.black26,
                         ),

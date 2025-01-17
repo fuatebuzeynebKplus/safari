@@ -877,10 +877,9 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
   // String apiBaseUrlGeneral =
   //     "https://sandbox.kplus.com.tr/kplus/v0/General.svc/Rest/Json";
 
-  String apiBaseUrl =
-      "https://ws.kplus.com.tr/alsafarigate/v0/Air.svc/Rest/Json";
+  String apiBaseUrl = "https://api.alsafarigate.com/v0/Air.svc/Rest/Json";
   String apiBaseUrlGeneral =
-      "https://ws.kplus.com.tr/alsafarigate/v0/General.svc/Rest/Json";
+      "https://api.alsafarigate.com/v0/General.svc/Rest/Json";
   final Dio _dio = Dio();
   bool theTextLengthIs3AndMore = false;
 
@@ -1405,7 +1404,7 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
   //     } else {
   //       emit(SearchFlightFailure(
   //           errorMassage: 'Response data is null', errorCode: 'NULL_RESPONSE'));
-  //       throw Exception('Uçuşlar yüklenemedi');
+  //       throw Exception(S.of(context).FlightsNotLoaded);
   //     }
   //   } catch (error) {
   //     emit(SearchFlightFailure(
@@ -1420,7 +1419,7 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
     emit(SearchFlightLoading());
     afterRefreshFlightSearchResultsLeaving = [];
     afterRefreshFlightSearchResultsReturn = [];
-    flightSearchResultsMainList;
+    flightSearchResultsMainList = [];
     flightSearchResultGo = [];
     theFlyInTheTurkey = true;
     String url = '$apiBaseUrl/SearchAvailability';
@@ -1648,7 +1647,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
                 errorMassage: errorMassage!, errorCode: errorCode!));
           } else {
             emit(SearchFlightFailure(
-                errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+                errorMassage: S.of(context).NoFlightsFound,
+                errorCode: 'NULL_RESPONSE'));
           }
 
           return result;
@@ -1670,15 +1670,16 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(SearchFlightFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
       }
     } else {
       emit(SearchFlightFailure(
-          errorMassage: 'Uçuşlar yüklenemedi', errorCode: 'NULL_RESPONSE'));
-      throw Exception('Uçuşlar yüklenemedi');
+          errorMassage: S.of(context).FlightsNotLoaded,
+          errorCode: 'NULL_RESPONSE'));
     }
   }
 
@@ -1904,7 +1905,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightFaresFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -2025,7 +2027,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightValidateFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -2140,7 +2143,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightBookFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -2332,7 +2336,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightPaymentOptionsFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -2492,7 +2497,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(GetReservationsFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return response.data;
@@ -2600,7 +2606,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightCancelReservationFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -2691,7 +2698,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightVoidTicketFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -2802,7 +2810,8 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(FlightCancelReservationFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
@@ -4622,53 +4631,61 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
     required List<String> flightClassCode,
     required AirResult result,
   }) async {
-    for (var item in flightSearchResultsMainList!.first.results!) {
-      var flightDetails = item.legs![0].alternativeLegs![0].segments!;
+    print('------------------------------------------------');
+    print('00000: ${flightSearchResultsMainList!.first.results!.length}');
+    print('------------------------------------------------');
+
+    for (var i = 0;
+        i < flightSearchResultsMainList!.first.results!.length;
+        i++) {
+      var item = flightSearchResultsMainList!.first.results![i];
       var classCodeDetails =
           result.fares!.first.fareAlternativeLegs!.first.fareSegments;
-      List<String> flightNo = [];
-      List<String> flightCode = [];
 
       List<String> classCode = [];
-
-      for (var segment in flightDetails) {
-        flightNo.add(segment.flightNo!);
-        flightCode.add(segment.ticketingAirline!.code!);
-      }
       for (var code in classCodeDetails!) {
         classCode.add(code.classCode!);
       }
-      bool isDuplicate =
-          item.legs![0].alternativeLegs![0].segments!.last.arrivalDate ==
-                  arrivalDateValue &&
-              item.legs![0].alternativeLegs![0].segments!.first.departureDate ==
-                  departureDateValue &&
-              listEquals(flightNo, flightNoValue) &&
-              listEquals(flightCode, flightCodeValue) &&
-              listEquals(classCode, flightClassCode);
 
-      if (isDuplicate) {
-        for (var segment in item.legs!.last.alternativeLegs!) {
-          //  firstLeg.add(segment);
-          afterRefreshFlightSearchResultsReturn.add(
-            AirResult(
-              data: item.data,
-              fares: item.fares,
-              groupId: 'p',
-              isCharter: item.isCharter,
-              legs: [
-                AirLeg(
-                  alternativeLegs: [segment],
-                  searchLeg: item.legs!.first.searchLeg!,
-                ),
-              ],
-              providerCode: item.providerCode,
-              resultRef: item.resultRef,
-            ),
-          );
+      bool isDuplicate = false;
+
+      // التحقق من كل الرحلات داخل `alternativeLegs`
+      for (var alternativeLeg in item.legs![0].alternativeLegs!) {
+        List<String> flightNo = [];
+        List<String> flightCode = [];
+        for (var segment in alternativeLeg.segments!) {
+          flightNo.add(segment.flightNo!);
+          flightCode.add(segment.ticketingAirline!.code!);
         }
 
-        print(afterRefreshFlightSearchResultsReturn.length);
+        if (alternativeLeg.segments!.last.arrivalDate == arrivalDateValue &&
+            alternativeLeg.segments!.first.departureDate ==
+                departureDateValue &&
+            listEquals(flightNo, flightNoValue) &&
+            listEquals(flightCode, flightCodeValue) &&
+            listEquals(classCode, flightClassCode)) {
+          isDuplicate = true;
+
+          // إذا وجد تطابق، أضف كل الرحلات داخل `item.legs!.last.alternativeLegs!`
+          for (var segment in item.legs!.last.alternativeLegs!) {
+            afterRefreshFlightSearchResultsReturn.add(
+              AirResult(
+                data: item.data,
+                fares: item.fares,
+                groupId: 'p',
+                isCharter: item.isCharter,
+                legs: [
+                  AirLeg(
+                    alternativeLegs: [segment],
+                    searchLeg: item.legs!.first.searchLeg!,
+                  ),
+                ],
+                providerCode: item.providerCode,
+                resultRef: item.resultRef,
+              ),
+            );
+          }
+        }
       }
     }
   }
@@ -5734,15 +5751,16 @@ class FlightTicketCubit extends Cubit<FlightTicketState> {
               errorMassage: errorMassage!, errorCode: errorCode!));
         } else {
           emit(SearchFlightFailure(
-              errorMassage: 'Uçuş Bulunmadı', errorCode: 'NULL_RESPONSE'));
+              errorMassage: S.of(context).NoFlightsFound,
+              errorCode: 'NULL_RESPONSE'));
         }
 
         return result;
       }
     } else {
       emit(SearchFlightFailure(
-          errorMassage: 'Uçuşlar yüklenemedi', errorCode: 'NULL_RESPONSE'));
-      throw Exception('Uçuşlar yüklenemedi');
+          errorMassage: S.of(context).FlightsNotLoaded,
+          errorCode: 'NULL_RESPONSE'));
     }
   }
 

@@ -14,7 +14,7 @@ import 'package:bamobile1/generated/l10n.dart';
 import 'package:bamobile1/helper/functions.dart';
 import 'package:bamobile1/helper/shared-preferences/cache_hekper.dart';
 import 'package:bamobile1/helper/shared-preferences/service_locator.dart';
-import 'package:bamobile1/test_view.dart';
+
 import 'package:bamobile1/utils/app_colors.dart';
 import 'package:bamobile1/utils/app_sizes.dart';
 import 'package:bamobile1/views/other-views/webview_view.dart';
@@ -138,7 +138,7 @@ class HotelPaymentDataEnterView extends StatelessWidget {
                                         is3D: true, // 38CM12TS82
                                         ipAdress: "88.241.185.1",
                                         returnUrl:
-                                            "https://www.bookingagora.com/"),
+                                            "https://www.alsafarigate.com/"),
                                     paymentItemId: hotelCubit.paymentId == null
                                         ? int.parse(hotelCubit.bookItemId!)
                                         : int.parse(hotelCubit.paymentId!),

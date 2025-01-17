@@ -146,6 +146,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "FlightNumber": MessageLookupByLibrary.simpleMessage("رقم الرحلة: "),
         "FlightTicket": MessageLookupByLibrary.simpleMessage("تذكرة طيران"),
         "FlightTime": MessageLookupByLibrary.simpleMessage("مدة الرحلة"),
+        "FlightsNotLoaded":
+            MessageLookupByLibrary.simpleMessage("لم يتم تحميل الرحلات"),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "Free": MessageLookupByLibrary.simpleMessage("مجاني"),
@@ -298,6 +300,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "كلمة المرور الجديدة لا يمكن أن تكون فارغة أو أقل من 8 أحرف"),
         "No": MessageLookupByLibrary.simpleMessage("لا"),
+        "NoFlightsFound":
+            MessageLookupByLibrary.simpleMessage("لم يتم العثور على رحلات"),
         "NoFlightsFoundInThisPriceRange": MessageLookupByLibrary.simpleMessage(
             "لم يتم العثور على رحلات في هذا النطاق السعري"),
         "NonRefundable":
@@ -479,6 +483,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "TotalCharge": MessageLookupByLibrary.simpleMessage("الإجمالي:"),
         "TransactionDate":
             MessageLookupByLibrary.simpleMessage("تاريخ المعاملة"),
+        "TransactionIsBeingProcessed":
+            MessageLookupByLibrary.simpleMessage("المعاملة قيد التنفيذ..."),
         "TransactionType": MessageLookupByLibrary.simpleMessage("نوع المعاملة"),
         "Transfer": MessageLookupByLibrary.simpleMessage("نقل"),
         "TryAgain": MessageLookupByLibrary.simpleMessage("حاول مرة أخرى"),

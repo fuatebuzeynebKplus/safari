@@ -198,7 +198,7 @@ class SignInView extends StatelessWidget {
                                                     GestureDetector(
                                                       onTap: () {
                                                         launchUrl(Uri.parse(
-                                                            'https://www.bookingagora.com/Page/kvkk--kisisel-verilerin-korunmasi-ve-islenmesi-hakkinda-aydinlatma-metni'));
+                                                            'https://www.alsafarigate.com'));
                                                       },
                                                       child: Text(
                                                         S
@@ -402,7 +402,7 @@ class SignInView extends StatelessWidget {
                                                     GestureDetector(
                                                       onTap: () {
                                                         launchUrl(Uri.parse(
-                                                            'https://www.bookingagora.com/Page/kvkk--kisisel-verilerin-korunmasi-ve-islenmesi-hakkinda-aydinlatma-metni'));
+                                                            'https://www.alsafarigate.com'));
                                                       },
                                                       child: Text(
                                                         S

@@ -100,7 +100,9 @@ class TicketCardLeavingWidget extends StatelessWidget {
     List<String> cabinClass = [];
 
     for (var fareSegments in flightCabinClassDetails!) {
-      cabinClass.add(fareSegments.classCode!);
+      if (fareSegments.classCode != null) {
+        cabinClass.add(fareSegments.classCode!);
+      }
     }
     String cabinClassString = cabinClass.join(',');
 
@@ -114,7 +116,9 @@ class TicketCardLeavingWidget extends StatelessWidget {
     List<String> classCode = [];
 
     for (var code in classCodeDetails!) {
-      classCode.add(code.classCode!);
+      if (code.classCode != null) {
+        classCode.add(code.classCode!);
+      }
     }
     for (var segment in flightDetails) {
       flightNo.add(segment.flightNo!);
@@ -304,12 +308,11 @@ class TicketCardLeavingWidget extends StatelessWidget {
                           width: 12,
                         ),
                         TextWidget(
-                          text:
-                              // '$componyName',
+                          text: '$componyName',
 
-                              flightTicketCubit.searchTypeValue == 'tek'
-                                  ? '$componyName  $index'
-                                  : '$componyName $index ${idGroup == 'Fsp' ? 'F' : idGroup == 'sp' ? 'S' : idGroup![0] == 'p' ? 'P' : 'W'}  ',
+                          // flightTicketCubit.searchTypeValue == 'tek'
+                          //     ? '$componyName  $index'
+                          //     : '$componyName $index ${idGroup == 'Fsp' ? 'F' : idGroup == 'sp' ? 'S' : idGroup![0] == 'p' ? 'P' : 'W'}  ',
                           fontSize: 14,
                           color: Colors.black26,
                         ),

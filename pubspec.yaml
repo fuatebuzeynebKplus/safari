@@ -1,7 +1,7 @@
 name: bamobile1
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.1.5+8
+version: 1.0.0+1
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
@@ -16,7 +16,7 @@ dependencies:
   json_annotation: ^4.9.0
   table_calendar: ^3.0.9
   syncfusion_flutter_datepicker: ^25.1.38
-  intl: ^0.18.1
+  intl: ^0.19.0
   bottom_picker: ^2.6.0
   country_list_pick: ^1.0.1+6
   country_code_picker: ^3.0.0
@@ -35,7 +35,7 @@ dependencies:
   flutter_image_slideshow: ^0.1.6
   newsfeed_multiple_imageview: ^1.0.1
   url_launcher: ^6.3.1
-  cloud_firestore: ^5.4.0
+  cloud_firestore: ^5.5.0
   cached_network_image: ^3.4.0
   firebase_core: ^3.4.0
   image_picker: ^1.1.2
@@ -50,7 +50,7 @@ dependencies:
   otp: ^3.1.4
   flutter_otp_text_field: ^1.2.0
   html: ^0.15.5
-  rename: ^3.0.2
+
 
 
 

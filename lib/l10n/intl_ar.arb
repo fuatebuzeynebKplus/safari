@@ -1,4 +1,7 @@
 {
+    "NoFlightsFound": "لم يتم العثور على رحلات",
+    "FlightsNotLoaded": "لم يتم تحميل الرحلات",
+    "TransactionIsBeingProcessed": "المعاملة قيد التنفيذ...",
     "SearchFlight": "البحث عن رحلة",
     "Amount": "المبلغ",
     "Percent": "النسبة",

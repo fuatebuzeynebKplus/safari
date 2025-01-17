@@ -149,6 +149,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "FlightNumber": MessageLookupByLibrary.simpleMessage("Flight number: "),
         "FlightTicket": MessageLookupByLibrary.simpleMessage("Flight Ticket"),
         "FlightTime": MessageLookupByLibrary.simpleMessage("flight time"),
+        "FlightsNotLoaded":
+            MessageLookupByLibrary.simpleMessage("Flights Not Loaded"),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password"),
         "Free": MessageLookupByLibrary.simpleMessage("Free"),
@@ -298,6 +300,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "New password cannot be empty or less than 8 characters"),
         "No": MessageLookupByLibrary.simpleMessage("No"),
+        "NoFlightsFound":
+            MessageLookupByLibrary.simpleMessage("No Flights Found"),
         "NoFlightsFoundInThisPriceRange": MessageLookupByLibrary.simpleMessage(
             "No flights found in this price range"),
         "NonRefundable": MessageLookupByLibrary.simpleMessage("Non-Refundable"),
@@ -486,6 +490,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "TotalCharge": MessageLookupByLibrary.simpleMessage("Total Charge:"),
         "TransactionDate":
             MessageLookupByLibrary.simpleMessage("Transaction Date"),
+        "TransactionIsBeingProcessed": MessageLookupByLibrary.simpleMessage(
+            "Transaction is being processed..."),
         "TransactionType":
             MessageLookupByLibrary.simpleMessage("Transaction Type"),
         "Transfer": MessageLookupByLibrary.simpleMessage("Transfer"),

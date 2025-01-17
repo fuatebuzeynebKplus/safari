@@ -60,8 +60,8 @@ class UpdatePopup extends StatelessWidget {
                 GestureDetector(
                   onTap: () async {
                     final Uri url = Uri.parse(Platform.isAndroid
-                        ? 'https://play.google.com/store/apps/details?id=com.kplus.bookingagora'
-                        : 'https://apps.apple.com/tr/app/bookingagora/id6737722022');
+                        ? 'https://play.google.com/store/apps/dev?id=7282599253291951508'
+                        : 'https://apps.apple.com/tr/developer/kplus-bilişim/id1555929233');
                     if (await canLaunchUrl(url)) {
                       await launchUrl(url,
                           mode: LaunchMode.externalApplication);

@@ -50,6 +50,36 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `No Flights Found`
+  String get NoFlightsFound {
+    return Intl.message(
+      'No Flights Found',
+      name: 'NoFlightsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flights Not Loaded`
+  String get FlightsNotLoaded {
+    return Intl.message(
+      'Flights Not Loaded',
+      name: 'FlightsNotLoaded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transaction is being processed...`
+  String get TransactionIsBeingProcessed {
+    return Intl.message(
+      'Transaction is being processed...',
+      name: 'TransactionIsBeingProcessed',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Search for a Flight`
   String get SearchFlight {
     return Intl.message(

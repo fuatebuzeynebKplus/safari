@@ -15,7 +15,7 @@ import 'package:bamobile1/helper/shared-preferences/service_locator.dart';
 import 'package:bamobile1/hotel/data/models/cancel_reservation.dart';
 import 'package:bamobile1/hotel/data/models/retrieve_reservation.dart';
 import 'package:bamobile1/pdf_view.dart';
-import 'package:bamobile1/test_view.dart';
+
 import 'package:bamobile1/utils/app_colors.dart';
 import 'package:bamobile1/utils/app_colors.dart';
 
@@ -201,7 +201,7 @@ class HotelReservationDetailsView extends StatelessWidget {
                                             is3D: true, // 38CM12TS82
                                             ipAdress: "88.241.185.1",
                                             returnUrl:
-                                                "https://www.bookingagora.com/",
+                                                "https://www.alsafarigate.com/",
                                             email: ''),
                                         paymentItemId: flightTicketCubit.paymentId == null
                                             ? int.parse(

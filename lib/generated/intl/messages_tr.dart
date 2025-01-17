@@ -150,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "FlightNumber": MessageLookupByLibrary.simpleMessage("Uçuş no: "),
         "FlightTicket": MessageLookupByLibrary.simpleMessage("Uçak Bileti"),
         "FlightTime": MessageLookupByLibrary.simpleMessage("Uçuş Süresi"),
+        "FlightsNotLoaded":
+            MessageLookupByLibrary.simpleMessage("Ucuşlar Yuklenmedi"),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("Şifremi Unuttum"),
         "Free": MessageLookupByLibrary.simpleMessage("Ücretsiz"),
@@ -304,6 +306,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Yeni şifre boş veya 8 karakterden az olamaz"),
         "No": MessageLookupByLibrary.simpleMessage("Hayır"),
+        "NoFlightsFound":
+            MessageLookupByLibrary.simpleMessage("Ucuşlar Bulunamadı"),
         "NoFlightsFoundInThisPriceRange": MessageLookupByLibrary.simpleMessage(
             "Bu fiyat aralığında uçuş bulunamadı"),
         "NonRefundable": MessageLookupByLibrary.simpleMessage("iade Edilemez"),
@@ -486,6 +490,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Total": MessageLookupByLibrary.simpleMessage("Toplam"),
         "TotalCharge": MessageLookupByLibrary.simpleMessage("Toplam Ücret:"),
         "TransactionDate": MessageLookupByLibrary.simpleMessage("İşlem Tarihi"),
+        "TransactionIsBeingProcessed": MessageLookupByLibrary.simpleMessage(
+            "İşleminizi gerçekleştiriyoruz..."),
         "TransactionType": MessageLookupByLibrary.simpleMessage("İşlem Tipi"),
         "Transfer": MessageLookupByLibrary.simpleMessage("Transfer"),
         "TryAgain": MessageLookupByLibrary.simpleMessage("Tekrar Deneyin"),
