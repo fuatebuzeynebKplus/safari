@@ -48,23 +48,24 @@ class ValidityWidget extends StatelessWidget {
                         //             .validityDate! ??
                         //         flightTicketCubit.validityDate!)
                         //     : S.of(context).ValidityDate,
-                        text: flightTicketCubit
-                                    .passengerCardDataList.isNotEmpty &&
+                        text: flightTicketCubit.passengerCardDataList.isNotEmpty &&
                                 index <
                                     flightTicketCubit
                                         .passengerCardDataList.length &&
-                                flightTicketCubit
-                                        .passengerCardDataList[index] !=
+                                flightTicketCubit.passengerCardDataList[index] !=
                                     null &&
                                 flightTicketCubit.passengerCardDataList[index]!
                                         .validityDate !=
                                     null
-                            ? DateFormat('dd.MM.yyyy').format(flightTicketCubit
-                                .passengerCardDataList[index]!.validityDate!)
+                            ? flightTicketCubit.convertArabicNumbersToEnglish(
+                                DateFormat('dd.MM.yyyy').format(flightTicketCubit
+                                    .passengerCardDataList[index]!
+                                    .validityDate!))
                             : (flightTicketCubit.validityDate == null
                                 ? ''
-                                : DateFormat('dd.MM.yyyy')
-                                    .format(flightTicketCubit.validityDate!)),
+                                : flightTicketCubit.convertArabicNumbersToEnglish(
+                                    DateFormat('dd.MM.yyyy').format(
+                                        flightTicketCubit.validityDate!))),
                         color: AppColors.kGrey,
                         fontWeight: FontWeight.bold,
                         fontSize: 16),

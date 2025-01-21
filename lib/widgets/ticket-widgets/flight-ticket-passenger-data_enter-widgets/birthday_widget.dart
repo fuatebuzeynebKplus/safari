@@ -76,13 +76,17 @@ class BirthdayWidget extends StatelessWidget {
                                               .passengerCardDataList[index]!
                                               .birthday !=
                                           null
-                                  ? DateFormat('dd/MM/yyyy').format(
-                                      flightTicketCubit
-                                          .passengerCardDataList[index]!
-                                          .birthday!)
+                                  ? flightTicketCubit
+                                      .convertArabicNumbersToEnglish(
+                                          DateFormat('dd/MM/yyyy').format(
+                                              flightTicketCubit
+                                                  .passengerCardDataList[index]!
+                                                  .birthday!))
                                   : flightTicketCubit.birthday != null
-                                      ? DateFormat('dd/MM/yyyy')
-                                          .format(flightTicketCubit.birthday!)
+                                      ? flightTicketCubit
+                                          .convertArabicNumbersToEnglish(
+                                              DateFormat('dd/MM/yyyy').format(
+                                                  flightTicketCubit.birthday!))
                                       : '',
                           color: AppColors.kGrey,
                           fontWeight: FontWeight.bold,

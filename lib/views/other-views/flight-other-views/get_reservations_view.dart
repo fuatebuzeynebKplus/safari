@@ -270,10 +270,12 @@ class GetReservationsView extends StatelessWidget {
                                   width: context.height * 0.04,
                                 ),
                                 TextWidget(
-                                  text: DateFormat('dd-MM-yyy').format(
-                                      flightTicketCubit
-                                          .selectDateTimeRangeReservation
-                                          .start),
+                                  text: flightTicketCubit
+                                      .convertArabicNumbersToEnglish(DateFormat(
+                                              'dd-MM-yyy')
+                                          .format(flightTicketCubit
+                                              .selectDateTimeRangeReservation
+                                              .start)),
                                   fontSize: 16,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -348,9 +350,12 @@ class GetReservationsView extends StatelessWidget {
                                   width: context.height * 0.04,
                                 ),
                                 TextWidget(
-                                  text: DateFormat('dd-MM-yyy').format(
-                                      flightTicketCubit
-                                          .selectDateTimeRangeReservation.end),
+                                  text: flightTicketCubit
+                                      .convertArabicNumbersToEnglish(DateFormat(
+                                              'dd-MM-yyy')
+                                          .format(flightTicketCubit
+                                              .selectDateTimeRangeReservation
+                                              .end)),
                                   fontSize: 16,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,

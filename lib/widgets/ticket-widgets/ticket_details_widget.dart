@@ -43,15 +43,19 @@ class TicketDetailsWidget extends StatelessWidget {
                                 ? TextWidget(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    text: DateFormat('dd-MM-yyy').format(
-                                        flightTicketCubit.dateTime ??
-                                            DateTime.now()))
+                                    text: flightTicketCubit
+                                        .convertArabicNumbersToEnglish(
+                                            DateFormat('dd-MM-yyy').format(
+                                                flightTicketCubit.dateTime ??
+                                                    DateTime.now())))
                                 : TextWidget(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    text: DateFormat('dd-MM-yyy').format(
-                                        flightTicketCubit
-                                            .dateTimeRange!.start)),
+                                    text: flightTicketCubit
+                                        .convertArabicNumbersToEnglish(
+                                            DateFormat('dd-MM-yyy').format(
+                                                flightTicketCubit
+                                                    .dateTimeRange!.start))),
                             TextWidget(
                               text: S.of(context).DepartureDate,
                               fontSize: 12,
@@ -151,9 +155,13 @@ class TicketDetailsWidget extends StatelessWidget {
                                         : flightTicketCubit.dateTimeRange ==
                                                 null
                                             ? '--- -- ----'
-                                            : DateFormat('dd-MM-yyy').format(
-                                                flightTicketCubit
-                                                    .dateTimeRange!.end),
+                                            : flightTicketCubit
+                                                .convertArabicNumbersToEnglish(
+                                                    DateFormat('dd-MM-yyy')
+                                                        .format(
+                                                            flightTicketCubit
+                                                                .dateTimeRange!
+                                                                .end)),
                                   ),
                             TextWidget(
                               text: S.of(context).ReturnDate,
